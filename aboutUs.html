@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>her COFFEE</title>
+    <link rel="icon" href="./img/icon/cup-hot.svg">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/newstyle.css">
+    <style>
+        section {
+            width: 90%;
+            display: flex;
+            margin: 50px auto;
+            font-family: monospace;
+
+        }
+
+        section>div {
+            display: inline-block;
+            width: 30%;
+            text-align: center;
+            margin: 0 auto;
+
+        }
+        section>div>img[src*="logo"]{
+            position: sticky;
+            top: 120px;
+            animation: fadeIn 1s linear 0s;
+        }
+
+        section div img {
+            width: 60%;
+        }
+
+        /* rwd90% */
+        .aboutus_info {
+            width: 70%;
+        }
+
+        .aboutus_info img {
+            width: 70%;
+            animation: fadeIn 1s linear 0s;
+        }
+
+        /* rwd 90%*/
+        .aboutus_info h4 {
+            font-size: 1.2rem;
+            padding-top: 1.5rem;
+        }
+
+        .aboutus_info p {
+            font-size: 1rem;
+            /* padding: 1rem; */
+            line-height: 2rem;
+
+
+        }
+        @media screen and (max-width:820px){
+            .aboutus_info img  {
+            width: 100%;
+        }
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 頁首 -->
+    <a href="#" class="goTop">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="m4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8z"/></svg>
+    </a>
+    <header>
+       
+        <div class="container" onclick="myButton(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+
+            <!-- 隱藏的rwd menu -->
+            <div class="rwdMenu" onclick="">
+                <nav>
+                    <ul>
+
+                        <li>
+                            <a href="./aboutUs.html">關於我們 ABOUT US</a>
+                        </li>
+
+
+                        <li>
+                            <a href="./aboutCoffee00.html">關於咖啡 ABOUT COFFEE ></a>
+                            <ul class="aboutCoffee">
+                                <li><a href="./aboutCoffee01.html">Roasting</a></li>
+                                <li><a href="./aboutCoffee02.html">HandDrip</a></li>
+                            </ul>
+                        </li>
+
+
+                        <li>
+                            <a>線上商店 ONLINE SHOP ></a>
+                            <ul class="onlineShop">
+                                <li><a href="./product.html">瓜地馬拉</a></li>
+                                <li><a href="./product01.html">衣索匹亞</a></li>
+                                <li><a href="./product02.html">尼加拉瓜</a></li>
+                            </ul>
+                        </li>
+
+
+                        <li>
+                            <a href="./newspage00.html">最新消息 NEWS</a>
+                        </li>
+
+                    </ul>
+                </nav>
+            </div>
+
+        </div>
+
+
+
+        <a href="./homePage.html">
+            <img src="./img/logo/headerLogo.png" alt="">
+        </a>
+
+
+        <nav>
+            <ul class="navbar">
+                <li><a href="./aboutUs.html">ABOUT US
+                        <br>關於我們</a></li>
+                <li><a href="./aboutCoffee00.html">ABOUT COFFEE
+                        <br>關於咖啡</a>
+                    <ul class="aboutCoffee">
+                        <li><a href="./aboutCoffee01.html">Roasting</a></li>
+                        <li><a href="./aboutCoffee02.html">HandDrip</a></li>
+                    </ul>
+                </li>
+                <li><a href="./product.html">ONLINE SHOP
+                        <br>線上商店</a>
+                    <ul class="onlineShop">
+                        <li><a href="./product.html">瓜地馬拉</a></li>
+                        <li><a href="./product01.html">衣索匹亞</a></li>
+                        <li><a href="./product02.html">尼加拉瓜</a></li>
+                    </ul>
+                </li>
+                <li><a href="./newspage00.html">NEWS
+                        <br>最新消息</a></li>
+            </ul>
+        </nav>
+        <nav>
+            <ul class="navicon">
+                <li><a href="">
+                        <img src="./img/icon/icon_user(op).png" alt="">
+                    </a></li>
+                <!-- <li><a href="">
+                        <img src="./img/icon/icon_search(op).png" alt="">
+                    </a></li> -->
+                <li><a href="">
+                        <img src="./img/icon/icon_cart(op).png" alt="">
+                    </a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- about us 主文 -->
+    <section>
+        <div>
+            <img src="./img/logo/logo(logo製作器).jpg" alt="">
+        </div>
+
+        <div class="aboutus_info">
+            <img src="./pics/why-i-started-drinking-coffee-again-nathan-dumlao.jpg" alt="">
+            <h4>每個人都可以享受和成長的地方</h4>
+            <p>
+                對於 her COFFEE 顧客來說，開始喝摩卡咖啡，然後轉而喝單一產地咖啡的情況並不少見。
+                我們相信her COFFEE是一個每個人都可以享受、成長和學習的地方。
+
+                製作一杯咖啡有很多故事和故事。
+                我想，如果能讓參與其中的每個人都微笑，那將是一件非常幸福和美好的事情。
+                為此，her COFFEE將繼續努力，並繼續提供優質的咖啡。</p>
+            <br>
+            <img src="./pics/Colombia_Coffee_Roasters01.jpg" alt="">
+            <h4>使用好的材料</h4>
+            <p>
+                透過比賽和烘焙學到的就是要用好的食材。這是製作優質咖啡的基本前提，也是我們所關注的重點。
+                為了有好的原料（綠咖啡豆），我們需要好的生產者。在一粒咖啡的完成之前，都有製作者的努力、背景和故事。
+
+                我們相信珍惜每一粒穀物是我們的責任，並透過一杯咖啡將這一點傳達給每個人。
+                透過與生產者建立關係，her COFFEE 提供您可以信賴的優質咖啡。
+                我們購買生豆的目的是建立這種可持續的關係。</p>
+        </div>
+
+    </section>
+
+    <!-- 頁尾 -->
+    <footer>
+        <div>
+            <nav>
+                <div>
+                    <a href="./homePage.html">
+                        <img src="./img/logo/logo(logo製作器).jpg" alt="">
+                    </a>
+                </div>
+
+                <table class="news">
+
+                    <tr>
+                        <th>最新消息</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="./newspage01.html">誕生祭
+                                <br>
+                                2024-08-13
+                            </a>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="./newspage02.html">國際咖啡日
+                                <br>
+                                2024-06-24
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="./newspage03.html">節慶快樂
+                                <br>
+                                2023-12-01
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+
+                <table class="social_plf">
+                    <tr>
+                        <th>社群平台</th>
+                    </tr>
+                    <tr>
+                        <td><a href="">Instagram</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="">Facebook</a></td>
+                    </tr>
+                </table>
+            </nav>
+            <p>© 2024  Coffee Company</p>
+        </div>
+    </footer>
+    <script>
+        function myButton(x) {
+            x.classList.toggle("change");
+        }
+    </script>
+</body>
+
+</html>

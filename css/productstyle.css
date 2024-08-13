@@ -1,0 +1,212 @@
+section {
+    margin: 30px auto;
+    width: 80%;
+    font-family: monospace;
+}
+
+.productInfo {
+    display: flex;
+    margin: auto;
+}
+
+/* 左側圖片 */
+.productInfo .imgSection {
+    width: 60%;
+}
+
+.productInfo .imgSection img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.productInfo .smImg {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+}
+
+.productInfo .smImg img {
+    width: 33%;
+    height: 140px;
+    object-fit: cover;
+
+}
+
+.productInfo .smImg img:not(:nth-of-type(1)) {
+    opacity: .7;
+}
+
+
+
+/* 右側產品資訊 */
+section .intro {
+    width: 30%;
+    margin: 0 auto;
+
+}
+
+section .intro>h3 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+section .intro>p {
+    line-height: 1.25rem;
+    margin-bottom: 15px;
+
+}
+
+section .intro>p:nth-of-type(2) {
+    cursor: pointer;
+}
+
+section .intro>p>span {
+    background-color: lightgrey;
+    display: inline-block;
+    width: 50px;
+    text-align: center;
+}
+
+section .intro>p:nth-of-type(2) input {
+    display: none;
+}
+
+section .intro>p:nth-of-type(2) input:checked+label {
+    background-color: #333;
+    color: #fff;
+}
+
+section .intro>p:nth-of-type(2) label {
+    display: inline-block;
+    width: 50px;
+    background-color: lightgrey;
+    text-align: center;
+    cursor: pointer;
+}
+
+.circle {
+    display: inline-block;
+    padding: 15px;
+    background-color: darkgrey;
+    border-radius: 50%;
+}
+
+.flavor {
+    margin-bottom: 15px;
+}
+
+.flavor p {
+    margin-bottom: 5px;
+}
+
+.btnFunc {
+    margin: 10px auto;
+}
+
+.btnFunc input,
+#weight {
+    width: 120px;
+    padding: 5px 10px;
+}
+
+.btnFunc a {
+    background-color: #333;
+    border: 1px solid #333;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 25px;
+    margin: 10px 0;
+    padding: 15px 10px;
+    display: block;
+    width: 163px;
+    text-align: center;
+    font-weight: bold;
+
+}
+
+/* 產品下方介紹 */
+.introBelow {
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+}
+
+div.introBelow:nth-of-type(even) {
+    flex-direction: row-reverse;
+}
+
+.introBelow img{
+    width: 50%;
+}
+.introBelow p,
+.introBelow h3{
+    padding: 0 10px;
+    line-height: 1.25rem;
+}
+.introBelow h3{
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+/* rwd */
+@media screen and (max-width:830px) {
+    .productInfo {
+        display: inline-block;
+        margin: auto;
+    }
+
+    .productInfo .imgSection {
+        width: 100%;
+    }
+
+    .productInfo .imgSection img {
+        width: 100%;
+        height: 450px;
+    }
+
+    .productInfo .smImg img {
+        width: 33%;
+        height: 130px;
+        object-fit: cover;
+
+    }
+
+    section {
+        width: 90%;
+    }
+
+    section .intro {
+        width: 100%;
+        margin: 30px auto;
+    }
+
+    .introBelow{
+        display: block;
+        text-align: center;
+    }
+    .introBelow img{
+        width: 80%;
+    }
+    .introBelow p,
+    .introBelow h3{
+        line-height: 1.25rem;
+        margin: 10px;
+    }
+
+}
+@media screen and (max-width:600px){
+    .productInfo .imgSection img {
+        width: 100%;
+        height: 300px;
+    }
+
+    .productInfo .smImg img {
+        width: 33%;
+        height: 100px;
+        object-fit: cover;
+
+    }
+}

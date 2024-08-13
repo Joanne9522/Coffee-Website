@@ -1,0 +1,110 @@
+/* 左側選單 */
+section {
+    display: flex;
+    width: 100%;
+    height: 65vh;
+    margin: 10px auto;
+    font-family: monospace;
+}
+
+section>aside {
+    width: 160px;
+    margin: 10vh 20px 0 0;
+
+}
+
+section aside div {
+    box-shadow: 2px 2px 5px #ddd;
+    padding: 20px 5px;
+}
+
+section>aside p {
+    font-size: 1.25rem;
+    padding: 10px 5px;
+    margin: auto;
+    white-space: nowrap;
+
+}
+
+section>aside p a {
+    color: #444;
+    text-decoration: none;
+    padding: 5px 0 5px 0;
+}
+
+section>aside p a:hover {
+    font-weight: bold;
+    transition: .5s;
+}
+
+
+/* 右側商品 */
+section>div {
+    width: 100%;
+    margin: 30px auto;
+    display: flex;
+    gap:0px;
+    justify-content: flex-start;
+    align-items:flex-start;
+}
+
+section>div img {
+    width: 90%;
+    margin: 0px auto 10px;
+    display: block;
+}
+
+section>div p {
+    font-size: 1rem;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+section>div>div a{
+    text-decoration: none;
+    color:#444
+}
+section>div>div a:hover{
+   opacity: .7;
+}
+section>div>div {
+    margin: 0 20px;
+    width: 30%;
+
+}
+
+/* footer {
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+
+} */
+/* rwd */
+@media screen and (max-width:600px) {
+    section>aside p {
+        font-size: 1rem;
+    }
+
+    section>div p {
+        font-size: .75rem;
+    }
+
+    section>div img {
+        width: 90px;
+
+    }
+
+    section>div>div {
+        margin: 10px;
+        width: 100px;
+    }
+    section {
+        height:65vh;
+        margin: 10px auto;
+    }
+    section div{
+    flex-wrap: wrap;
+    overflow: hidden;
+    }
+}

@@ -1,0 +1,513 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* 以上css reset */
+
+/* 頁首-menu */
+body {
+    font-family: monospace;
+}
+
+header {
+    text-align: center;
+    height: 72px;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    z-index: 100;
+    box-shadow: 2px 2px 5px #ddd;
+    margin: auto;
+}
+
+header>a {
+    display: inline-block;
+    width: 150px;
+    height: 40px;
+    margin-top: 10px;
+
+}
+
+header a img[src*="headerLogo"] {
+    width: 100%;
+    height: 50px;
+}
+
+header nav {
+    display: inline-block;
+    height: 40px;
+}
+
+
+ul.navbar {
+    font-size: 0;
+    margin-left: 8rem;
+    margin-right: 8rem;
+
+}
+
+ul.navbar li {
+    display: inline-block;
+    font-size: 1rem;
+    height: 40px
+}
+
+.navbar li a {
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    font-family: monospace;
+    color: #333;
+    font-weight: bold;
+    padding: 12px;
+
+}
+.navbar .onlineShop,
+.navbar .aboutCoffee {
+    margin-left: 10px;
+
+
+}
+.navbar .aboutCoffee{
+    padding: 5px;
+}
+    
+
+
+
+.navbar>li:hover:nth-of-type(1),
+.navbar>li:hover:nth-of-type(4) {
+    border-bottom: 2px solid #666;
+    padding-bottom: 10px;
+
+}
+
+.navbar ul li:hover,
+.navbar li:hover {
+    opacity: .7;
+
+}
+
+
+/* 頁首-icon */
+.navicon ul {
+    font-size: 0;
+}
+
+.navicon li {
+    display: inline-block;
+    margin: auto;
+    text-align: center;
+    height: 40px;
+}
+
+
+.navicon li a:hover {
+    font-size: 18px;
+    color: #fff;
+
+}
+
+.navicon img {
+    width: 20px;
+}
+
+/* rwd menu */
+.rwdMenu {
+    position: absolute;
+    top: 53px;
+    left: -1500px;
+    background-color: rgba(255, 255, 255, .9);
+    box-shadow: 2px 2px 5px #ddd;
+    text-align: center;
+    height: 100vh;
+    width: 65%;
+    padding: 0;
+    /* display: none; */
+}
+
+.rwdMenu ul {
+    /* width: 100%; */
+    padding: 0;
+    margin: 0;
+    font-size: 0;
+}
+
+.rwdMenu ul li {
+    margin: 0;
+    font-size: 0;
+    border-bottom: 1px solid #ddd;
+
+}
+
+.rwdMenu ul a,
+.rwdMenu ul li p {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #333;
+    white-space: nowrap;
+    margin: 0;
+    padding: 30px 12px;
+}
+.rwdMenu ul a{
+    display: block;
+}
+
+.rwdMenu ul li:hover {
+    background-color: rgba(249, 241, 192, .6);
+}
+
+.rwdMenu ul li:hover {
+    opacity: .8;
+    background-color: rgba(249, 241, 192, .6);
+
+}
+
+.aboutCoffee,
+.onlineShop {
+    position: absolute;
+    text-align: left;
+    background-color: rgba(255, 255, 255, .9);
+    box-shadow: 2px 2px 5px #ddd;
+    text-align: center;
+    width: 100px;
+    visibility: hidden;
+
+}
+/* go back to top btn */
+.goTop{
+    display: inline-block;
+    position: fixed;
+    bottom: 80px;
+    right: 30px;
+    /* background-color: rgba(230,230,230,.4); */
+    cursor: pointer;
+    color: #333;
+    z-index: 99;
+}
+.goTop:hover{
+    opacity: .6;
+    background-color: #fff;
+    border-radius: 40%;
+}
+
+/* menu rwd icon */
+@media screen and (min-width:921px) {
+    header div.container {
+        visibility: hidden;
+    }
+
+    .rwdMenu {
+        display: none;
+    }
+
+    .aboutCoffee {
+        top: 72px;
+    }
+
+    .onlineShop {
+        top: 72px;
+    }
+
+    .navbar li:hover ul {
+        visibility: visible;
+    }
+
+}
+
+/* RWD */
+@media screen and (max-width:920px) {
+
+    header .navbar li,
+    header .navicon li {
+        display: none;
+    }
+
+    .rwdMenu {
+        width: 220px;
+    }
+
+    header a {
+        display: inline-block;
+        /* width: 50%; */
+        text-align: center;
+        margin: auto;
+    }
+
+    header a {
+        display: block;
+    }
+
+    .aboutCoffee {
+        position: absolute;
+        top: 77px;
+        left: 220px;
+        width: 65%;
+
+    }
+
+    .onlineShop {
+        position: absolute;
+        top: 154px;
+        left: 220px;
+        width: 65%;
+
+    }
+
+    .rwdMenu ul li:hover ul {
+        visibility: visible;
+    }
+    header a img[src*="headerLogo"]{
+        margin-top: 10px;
+    }
+}
+
+
+header div.container {
+    display: inline-block;
+    cursor: pointer;
+    position: absolute;
+    top: 18px;
+    left: 10px;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 30px;
+    height: 6px;
+    background-color: #333;
+    margin: 5px 10px;
+    transition: 0.4s;
+    border-radius: 5px;
+}
+
+/* JS用 */
+.change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+    transition: .5s;
+
+}
+
+.change .bar2 {
+    opacity: 0;
+
+}
+
+.change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+    transition: .5s;
+
+}
+
+.change .rwdMenu {
+    top: 53px;
+    left: -10px;
+    transition: .3s;
+}
+
+
+
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+/* 頁尾 */
+
+footer {
+    background-color: #F9F1C0;
+    text-align: center;
+    font-family: monospace;
+    /* position: absolute; */
+    width: 100%;
+    /* bottom: 0;
+    left: 0; */
+
+}
+
+footer img {
+    height: 25vh;
+    margin-right: 30px;
+
+}
+
+footer nav {
+    margin: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* align-content: center; */
+}
+
+footer table {
+    margin-right: 30px;
+    display: inline-block;
+    text-align: left;
+    padding-top: 30px;
+
+}
+
+footer table th {
+    border-bottom: 1px solid black;
+}
+
+footer table th,
+footer table td {
+    padding: 10px 0 10px 0;
+    width: 20vw;
+
+}
+
+footer table td a {
+    text-decoration: none;
+    color: black !important;
+}
+
+footer table td a:hover {
+    text-decoration: underline 1px black;
+}
+
+
+/* footer p{
+    background-color: #F9F1C0;
+
+} */

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>her COFFEE</title>
+    <link rel="icon" href="./img/icon/cup-hot.svg">
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+        .roasting,
+        .handdrip {
+            width: 40%;
+            position: relative;
+            margin: 30px auto;
+            font-family: monospace;
+        }
+
+        .roasting img,
+        .handdrip img {
+            width: 100%;
+            animation: fadeIn 1s linear 0s;
+        }
+
+        .roasting div,
+        .handdrip div {
+            width: 50%;
+            background-color: transparent;
+            color: #fff;
+            padding: 10px;
+            position: absolute;
+            left: 3%;
+            top: 15%;
+            line-height: 1.2rem;
+            /* transform: translate(-50%, -50%); */
+
+        }
+
+        .roasting h4,
+        .handdrip h4 {
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        .roasting p,
+        .handdrip p {
+            font-size: .75rem;
+            width: 70%;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+            overflow: hidden;
+
+        }
+
+        .roasting a,
+        .handdrip a {
+            display: inline-block;
+            text-decoration: none;
+            color: #fff;
+            background-color: #444;
+            border-radius: 25px;
+            padding: 10px 25px;
+            margin-top: 15%;
+        }
+
+        @media screen and (max-width:920px) {
+
+            .roasting,
+            .handdrip {
+                width: 60%;
+            }
+
+        }
+
+        @media screen and (max-width:570px) {
+
+            .roasting,
+            .handdrip {
+                width: 90%;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 頁首 -->
+    <a href="#" class="goTop">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="m4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8z"/></svg>
+    </a>
+    <header>
+        
+        <div class="container" onclick="myButton(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+
+            <!-- 隱藏的rwd menu -->
+            <div class="rwdMenu" onclick="">
+                <nav>
+                    <ul>
+
+                        <li>
+                            <a href="./aboutUs.html">關於我們 ABOUT US</a>
+                        </li>
+
+
+                        <li>
+                            <a href="./aboutCoffee00.html">關於咖啡 ABOUT COFFEE ></a>
+                            <ul class="aboutCoffee">
+                                <li><a href="./aboutCoffee01.html">Roasting</a></li>
+                                <li><a href="./aboutCoffee02.html">HandDrip</a></li>
+                            </ul>
+                        </li>
+
+
+                        <li>
+                            <a>線上商店 ONLINE SHOP ></a>
+                            <ul class="onlineShop">
+                                <li><a href="./product.html">瓜地馬拉</a></li>
+                                <li><a href="./product01.html">衣索匹亞</a></li>
+                                <li><a href="./product02.html">尼加拉瓜</a></li>
+                            </ul>
+                        </li>
+
+
+                        <li>
+                            <a href="./newspage00.html">最新消息 NEWS</a>
+                        </li>
+
+                    </ul>
+                </nav>
+            </div>
+
+        </div>
+
+
+
+        <a href="./homePage.html">
+            <img src="./img/logo/headerLogo.png" alt="">
+        </a>
+
+
+        <nav>
+            <ul class="navbar">
+                <li><a href="./aboutUs.html">ABOUT US
+                        <br>關於我們</a></li>
+                <li><a href="./aboutCoffee00.html">ABOUT COFFEE
+                        <br>關於咖啡</a>
+                    <ul class="aboutCoffee">
+                        <li><a href="./aboutCoffee01.html">Roasting</a></li>
+                        <li><a href="./aboutCoffee02.html">HandDrip</a></li>
+                    </ul>
+                </li>
+                <li><a href="./product.html">ONLINE SHOP
+                        <br>線上商店</a>
+                    <ul class="onlineShop">
+                        <li><a href="./product.html">瓜地馬拉</a></li>
+                        <li><a href="./product01.html">衣索匹亞</a></li>
+                        <li><a href="./product02.html">尼加拉瓜</a></li>
+                    </ul>
+                </li>
+                <li><a href="./newspage00.html">NEWS
+                        <br>最新消息</a></li>
+            </ul>
+        </nav>
+        <nav>
+            <ul class="navicon">
+                <li><a href="">
+                        <img src="./img/icon/icon_user(op).png" alt="">
+                    </a></li>
+                <!-- <li><a href="">
+                        <img src="./img/icon/icon_search(op).png" alt="">
+                    </a></li> -->
+                <li><a href="">
+                        <img src="./img/icon/icon_cart(op).png" alt="">
+                    </a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- about coffee 主文 -->
+
+    <div class="roasting">
+        <img src="./pics/15A3056-1.jpg">
+        <div>
+            <h4>ROASTING</h4>
+            <h4>烘焙的堅持</h4>
+            <p>為了追求最好的風味表現，我們因應不同生豆進行
+                不同程度的烘焙，並嚴格控管品質， 以表現最佳
+                的狀態傳遞至客人手中，希望顧客能充分享受到
+                豐富的風味以及產區特色的魅力。</p>
+            <a href="./aboutCoffee01.html">了解更多</a>
+        </div>
+    </div>
+    <div class="handdrip">
+        <img src="./pics/5-Hario-Kalita-Virus-Fellow.jpg" alt="">
+        <div>
+            <h4>HAND DRIP</h4>
+            <h4>手沖咖啡教學</h4>
+            <p>介紹her COFFEE推薦的手沖咖啡
+                參數。 在家萃取時可以參考。</p>
+            <a href="./aboutCoffee02.html">了解更多</a>
+        </div>
+    </div>
+
+    <!-- 頁尾 -->
+    <footer>
+        <div>
+            <nav>
+                <div>
+                    <a href="./homePage.html">
+                        <img src="./img/logo/logo(logo製作器).jpg" alt="">
+                    </a>
+                </div>
+
+                <table class="news">
+
+                    <tr>
+                        <th>最新消息</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="./newspage01.html">誕生祭
+                                <br>
+                                2024-08-13
+                            </a>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="./newspage02.html">國際咖啡日
+                                <br>
+                                2024-06-24
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="./newspage03.html">節慶快樂
+                                <br>
+                                2023-12-01
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+
+                <table class="social_plf">
+                    <tr>
+                        <th>社群平台</th>
+                    </tr>
+                    <tr>
+                        <td><a href="">Instagram</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="">Facebook</a></td>
+                    </tr>
+                </table>
+            </nav>
+            <p>© 2024  Coffee Company</p>
+        </div>
+    </footer>
+    <script>
+        function myButton(x) {
+            x.classList.toggle("change");
+        }
+    </script>
+</body>
+
+</html>

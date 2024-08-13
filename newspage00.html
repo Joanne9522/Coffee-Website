@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>her COFFEE</title>
+    <link rel="icon" href="./img/icon/cup-hot.svg">
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./bootstrap/js/bootstrap.js">
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+        section div a:hover {
+            text-decoration: underline 1px #333 !important;
+        }
+
+        section {
+            font-family: monospace;
+        }
+
+        section div img {
+            object-fit: cover;
+        }
+
+        section div p {
+            height: 50px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        section div h3 {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        section div p:nth-of-type(3) {
+            margin-top: 2rem;
+        }
+
+        section .newsGroup img {
+            height: 40%;
+
+        }
+
+        .navbar>li:hover:nth-of-type(1),
+        .navbar>li:hover:nth-of-type(4) {
+            border-bottom: 0px solid rgba(102, 102, 102,0);
+            color: #666;
+        }
+
+        /* RWD */
+        @media screen and (max-width:920px) {
+            header ul {
+                display: none !important;
+            }
+
+        }
+
+
+        /* menu rwd icon */
+        @media screen and (min-width:921px) {
+            header div.container {
+                visibility: hidden !important;
+            }
+
+            .aboutCoffee {
+                top: 65px;
+            }
+
+            .onlineShop {
+                top: 65px;
+            }
+
+            .navbar li:hover ul {
+                visibility: visible;
+            }
+        }
+
+
+        header div.container {
+            display: inline-block !important;
+            cursor: pointer;
+            position: absolute !important;
+            top: 25px !important;
+            left: 0px !important;
+            width: 62px;
+        }
+
+        .bar1,
+        .bar2,
+        .bar3 {
+            width: 30px;
+            height: 6px;
+            background-color: #333;
+            margin: 5px 10px;
+            transition: 0.4s;
+            border-radius: 5px;
+        }
+
+        .change .bar1 {
+            transform: translate(0, 11px) rotate(-45deg);
+
+        }
+
+        .change .bar2 {
+            opacity: 0;
+        }
+
+        .change .bar3 {
+            transform: translate(0, -11px) rotate(45deg);
+        }
+
+        header {
+            height: 90px;
+            margin-top: 0;
+            padding-top: 0;
+        }
+
+        header nav ul {
+            padding-top: 0;
+            margin-top: 0;
+        }
+
+        header nav {
+            padding-top: 0;
+            margin-top: 0;
+        }
+
+    
+
+        /* menu rwd icon */
+        @media screen and (min-width:921px) {
+            header div.container {
+                visibility: hidden;
+            }
+
+            .rwdMenu {
+                display: none;
+            }
+        }
+
+        /* RWD */
+        @media screen and (max-width:920px) {
+
+            header .navbar li,
+            header .navicon li {
+                display: none;
+            }
+
+            .rwdMenu {
+                width: 220px;
+            }
+
+            header a {
+                display: inline-block;
+                /* width: 50%; */
+                text-align: center;
+                margin: auto;
+            }
+
+            header a {
+                display: block;
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- 頁首 -->
+    <a href="#" class="goTop">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="m4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8z"/></svg>
+    </a>
+    <header>
+       
+        <div class="container" onclick="myButton(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+
+            <!-- 隱藏的rwd menu -->
+            <div class="rwdMenu" onclick="">
+                <nav>
+                    <ul>
+
+                        <li>
+                            <a href="./aboutUs.html">關於我們 ABOUT US</a>
+                        </li>
+
+
+                        <li>
+                            <a href="./aboutCoffee00.html">關於咖啡 ABOUT COFFEE ></a>
+                            <ul class="aboutCoffee">
+                                <li><a href="./aboutCoffee01.html">Roasting</a></li>
+                                <li><a href="./aboutCoffee02.html">HandDrip</a></li>
+                            </ul>
+                        </li>
+
+
+                        <li>
+                            <a>線上商店 ONLINE SHOP ></a>
+                            <ul class="onlineShop">
+                                <li><a href="./product.html">瓜地馬拉</a></li>
+                                <li><a href="./product01.html">衣索匹亞</a></li>
+                                <li><a href="./product02.html">尼加拉瓜</a></li>
+                            </ul>
+                        </li>
+
+
+                        <li>
+                            <a href="./newspage00.html">最新消息 NEWS</a>
+                        </li>
+
+                    </ul>
+                </nav>
+            </div>
+
+        </div>
+
+
+
+        <a href="./homePage.html">
+            <img src="./img/logo/headerLogo.png" alt="">
+        </a>
+
+
+        <nav>
+            <ul class="navbar">
+                <li class="pb-5"><a href="./aboutUs.html" class="pb-2">ABOUT US
+                        <br>關於我們</a></li>
+                <li class="pb-5"><a href="./aboutCoffee00.html">ABOUT COFFEE
+                        <br>關於咖啡</a>
+                    <ul class="aboutCoffee">
+                        <li><a href="./aboutCoffee01.html">Roasting</a></li>
+                        <li><a href="./aboutCoffee02.html">HandDrip</a></li>
+                    </ul>
+                </li>
+                <li class="pb-5"><a href="./product.html">ONLINE SHOP
+                        <br>線上商店</a>
+                    <ul class="onlineShop">
+                        <li><a href="./product.html">瓜地馬拉</a></li>
+                        <li><a href="./product01.html">衣索匹亞</a></li>
+                        <li><a href="./product02.html">尼加拉瓜</a></li>
+                    </ul>
+                </li>
+                <li class="pb-5"><a href="./newspage00.html">NEWS
+                        <br>最新消息</a></li>
+            </ul>
+        </nav>
+        <nav>
+            <ul class="navicon">
+                <li><a href="">
+                        <img src="./img/icon/icon_user(op).png" alt="">
+                    </a></li>
+                <!-- <li><a href="">
+                        <img src="./img/icon/icon_search(op).png" alt="">
+                    </a></li> -->
+                <li><a href="">
+                        <img src="./img/icon/icon_cart(op).png" alt="">
+                    </a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- news section -->
+    <section>
+        <div class="newsGroup row row-cols-3 m-auto mt-5 mb-5 w-75 ">
+
+            <div class=" mb-4">
+                <a href="./newspage01.html" class="text-decoration-none text-black">
+                    <img src="./img/news01-800x800.png" class="w-100">
+                    <div>
+                        <h3 class="pt-2">誕生祭</h3>
+                        <p class="pt-2">2024-08-13</p>
+                        <p class="pt-2">
+                            又到了 her COFFEE 重要日子啦！
+                            <br>
+                            祝我們生日快樂 🎂
+                            <!-- <br>
+                            非常謝謝大家支持與鼓勵
+                            未來還請多多指教 ❤️
+                            <br>
+                            4/1-4/30 咖啡周邊商品優惠中！
+                            // 店鋪活動 //
+                            <br>
+                            ♦️ 咖啡豆買二送一
+                            <br>
+                            購買200g 配方豆 贈 配方美式乙杯
+                            <br>
+                            購買200g 單品豆 贈 單品美式乙杯 -->
+                        </p>
+                        <p>read more...</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class=" mb-4">
+                <a href="./newspage02.html" class="text-decoration-none text-black">
+                    <img src="./img/news02-4-800x398.jpg" class="w-100">
+                    <div>
+                        <h3 class="pt-2">國際咖啡日</h3>
+                        <p class="pt-2">2024-06-24</p>
+                        <p class="pt-2">
+                            即將迎來一年一次的「國際咖啡日」，藉由國際咖啡日的時機，
+                            <br>
+                            想讓更多喜歡her COFFEE TAIWAN的大家有一個享受優惠福利的機會。
+                            <!-- <br>
+                            同時，更要感謝大家對我們的支持。我們將於6月30日(六)至7月7日(日)
+                            在店鋪及官網上都有10%OFF的優惠，
+
+                            大家不要錯過囉！ -->
+                        </p>
+                        <p>read more...</p>
+
+                    </div>
+                </a>
+            </div>
+
+            <div class=" mb-4">
+                <a href="./newspage03.html" class="text-decoration-none text-black">
+                    <img src="./img/news03-拷貝-1080x623.jpg" class="w-100">
+                    <div>
+                        <h3 class="pt-2">節慶快樂</h3>
+                        <p class="pt-2">2023-12-01</p>
+                        <p class="pt-2">聖誕節即將來臨
+                            <br>
+                            是不是開始跟朋友家人籌備派對了呢？
+                            <!-- <br>
+                            交換禮物的準備如何了？
+                            我們特地推出小巧精緻的禮盒
+                            <br>
+                            充滿節慶氛圍的咖啡濾泡
+                            也有聖誕鐵盒餅乾組可以選擇
+                            <br>
+                            冷冷的天
+                            收一份暖暖的心意 -->
+                        </p>
+                        <p>read more...</p>
+
+                    </div>
+                </a>
+            </div>
+
+
+            <div class=" mb-4">
+                <a href="./newspage04.html" class="text-decoration-none text-black">
+                    <img src="./img/news04-1-1080x720.jpg" class="w-100">
+                    <div>
+                        <h3 class="pt-2">保溫瓶</h3>
+                        <p class="pt-2">2023-08-01</p>
+                        <p class="pt-2">保溫瓶新上市‼️‼️
+                            <br>
+                            終於等到新款保溫瓶，藉由週年慶之際我們即將販售囉！
+                            <!-- <br>
+                            簡約吸睛的造型設計是不是也很想入手了呢！
+                            <br>
+                            飲品用具品牌為Kinto的TRAIN TUMBLER律動保溫瓶，                           
+                            有580ml、1080ml兩種尺寸，全部採用「雷雕」手法，
+                            使產品更加有質感且耐刮膜。
+                            另外還有Kinto的DAY OFF TUMBLER保溫瓶，容量為500ml。
+                            
+                            兩款冷熱飲都適用，圓潤好握取的把手設計加上寬口徑的設計，
+                            不僅清洗容易也方便放入冰塊。 -->
+                        </p>
+                        <p>read more...</p>
+
+                    </div>
+                </a>
+            </div>
+
+
+            <div class=" mb-4">
+                <a href="./newspage05.html" class="text-decoration-none text-black">
+                    <img src="./img/news05-9-1080x720.jpg" class="w-100">
+                    <div>
+                        <h3 class="pt-2">her COFFEE烘豆機</h3>
+                        <p class="pt-2">2023-05-05</p>
+                        <p class="pt-2">her COFFEE的咖啡豆是以
+                            <br>
+                            LORING Roaster全熱風來烘焙。
+                            <!-- <br>
+                            咖啡的乾淨度提升且有更好的加熱效率，
+                            保有咖啡更好的風味口感和香氣。
+                            
+                            希望在我們專業的烘焙以及沖煮下，
+                            您會喜歡今天的咖啡。 -->
+                        </p>
+                        <p>read more...</p>
+
+                    </div>
+                </a>
+            </div>
+
+
+            <div class=" mb-4">
+                <a href="./newspage06.html" class="text-decoration-none text-black">
+                    <img src="./img/news06-4-1080x720.jpg" class="w-100">
+                    <div>
+                        <h3 class="pt-2">春季配方</h3>
+                        <p class="pt-2">2023-02-15</p>
+                        <p class="pt-2">春季來了，新的一年開始了
+                            <br>
+                            這款咖啡散發出花香香氣
+                            <!-- 並帶有橙子和硬核水果的柔和果味
+                            滑順的口感是最適合春天的咖啡
+                            
+                            一起用這款咖啡，展開今年新篇章吧！
+                            
+                            2月15日，上市囉！ -->
+                        </p>
+                        <p>read more...</p>
+
+                    </div>
+                </a>
+            </div>
+
+
+        </div>
+
+
+    </section>
+    <!-- 頁尾 -->
+    <footer>
+
+        <nav>
+            <div>
+                <a href="./homePage.html">
+                    <img src="./img/logo/logo(logo製作器).jpg" alt="">
+                </a>
+            </div>
+
+            <table class="news">
+
+                <tr>
+                    <th>最新消息</th>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="./newspage01.html">誕生祭
+                            <br>
+                            2024-08-13
+                        </a>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        <a href="./newspage02.html">國際咖啡日
+                            <br>
+                            2024-06-24
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="./newspage03.html">節慶快樂
+                            <br>
+                            2023-12-01
+                        </a>
+                    </td>
+                </tr>
+            </table>
+
+            <table class="social_plf">
+                <tr>
+                    <th>社群平台</th>
+                </tr>
+                <tr>
+                    <td><a href="">Instagram</a></td>
+                </tr>
+                <tr>
+                    <td><a href="">Facebook</a></td>
+                </tr>
+            </table>
+        </nav>
+        <p>© 2024  Coffee Company</p>
+
+    </footer>
+    <script>
+        function myButton(x) {
+            x.classList.toggle("change");
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>her COFFEE</title>
+    <link rel="icon" href="./img/icon/cup-hot.svg">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/productstyle.css">
+    <style>
+        .flavor span:nth-of-type(1) {
+            background-color: #444;
+        }
+
+        div.flavor:nth-of-type(1) span:nth-of-type(2) {
+            background-color: #444;
+        }
+
+        div.flavor:nth-of-type(1) span:nth-of-type(3) {
+            background-color: #444;
+        }
+
+        div.flavor:nth-of-type(1) span:nth-of-type(4) {
+            background-color: #444;
+        }
+
+
+        div.flavor:nth-of-type(2) span:nth-of-type(2) {
+            background-color: #444;
+        }
+
+        div.flavor:nth-of-type(2) span:nth-of-type(3) {
+            background-color: #444;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- 頁首 -->
+    <a href="#" class="goTop">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="m4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8z"/></svg>
+    </a>
+    <header>
+        
+        <div class="container" onclick="myButton(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+
+            <!-- 隱藏的rwd menu -->
+            <div class="rwdMenu" onclick="">
+                <nav>
+                    <ul>
+
+                        <li>
+                            <a href="./aboutUs.html">關於我們 ABOUT US</a>
+                        </li>
+
+
+                        <li>
+                            <a href="./aboutCoffee00.html">關於咖啡 ABOUT COFFEE ></a>
+                            <ul class="aboutCoffee">
+                                <li><a href="./aboutCoffee01.html">Roasting</a></li>
+                                <li><a href="./aboutCoffee02.html">HandDrip</a></li>
+                            </ul>
+                        </li>
+
+
+                        <li>
+                            <a>線上商店 ONLINE SHOP ></a>
+                            <ul class="onlineShop">
+                                <li><a href="./product.html">瓜地馬拉</a></li>
+                                <li><a href="./product01.html">衣索匹亞</a></li>
+                                <li><a href="./product02.html">尼加拉瓜</a></li>
+                            </ul>
+                        </li>
+
+
+                        <li>
+                            <a href="./newspage00.html">最新消息 NEWS</a>
+                        </li>
+
+                    </ul>
+                </nav>
+            </div>
+
+        </div>
+
+
+
+        <a href="./homePage.html">
+            <img src="./img/logo/headerLogo.png" alt="">
+        </a>
+
+
+        <nav>
+            <ul class="navbar">
+                <li><a href="./aboutUs.html">ABOUT US
+                        <br>關於我們</a></li>
+                <li><a href="./aboutCoffee00.html">ABOUT COFFEE
+                        <br>關於咖啡</a>
+                    <ul class="aboutCoffee">
+                        <li><a href="./aboutCoffee01.html">Roasting</a></li>
+                        <li><a href="./aboutCoffee02.html">HandDrip</a></li>
+                    </ul>
+                </li>
+                <li><a href="./product.html">ONLINE SHOP
+                        <br>線上商店</a>
+                    <ul class="onlineShop">
+                        <li><a href="./product.html">瓜地馬拉</a></li>
+                        <li><a href="./product01.html">衣索匹亞</a></li>
+                        <li><a href="./product02.html">尼加拉瓜</a></li>
+                    </ul>
+                </li>
+                <li><a href="./newspage00.html">NEWS
+                        <br>最新消息</a></li>
+            </ul>
+        </nav>
+        <nav>
+            <ul class="navicon">
+                <li><a href="">
+                        <img src="./img/icon/icon_user(op).png" alt="">
+                    </a></li>
+                <!-- <li><a href="">
+                        <img src="./img/icon/icon_search(op).png" alt="">
+                    </a></li> -->
+                <li><a href="">
+                        <img src="./img/icon/icon_cart(op).png" alt="">
+                    </a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 主文 -->
+    <section>
+        <div class="productInfo">
+            <div class="imgSection">
+                <img src="./pics/15d3a469006593.5b719df26b9a0.jpg" id="mainPic">
+                <div class="smImg">
+                    <img src="./pics/15d3a469006593.5b719df26b9a0.jpg" onclick="mainImg()">
+                    <img src="./pics/Types-of-Coffee-Beans_Green_Coffee_Bean_750.jpg" onclick="mainImg01()">
+                    <img src="./pics/Untitled_design_4_da58d513.jpg" onclick="mainImg02()">
+                </div>
+            </div>
+            <div class="intro">
+                <h3>瓜地馬拉 聖費麗莎莊園 SL28 日曬處理</h3>
+                <p>
+                    價格：$800
+                    <br>
+                    重量：115g/228g
+                </p>
+
+                <p>
+                    焙度：
+                    <br>
+                    <input type="radio" class="roastDgree" name="roastdegree" id="light"></input>
+                    <label for="light">淺</label>
+
+                    <input type="radio" class="roastDgree" name="roastdegree" id="medium"></input>
+                    <label for="medium">中</label>
+
+                    <input type="radio" class="roastDgree" name="roastdegree" id="dark"></input>
+                    <label for="dark">深</label>
+                </p>
+
+                <p>
+                    風味：
+                    <br>
+                    青梅、紅糖、蘋果尾韻
+                </p>
+                <div class="flavor">
+                    <p>甜味：</p>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                </div>
+
+                <div class="flavor">
+                    <p>酸味：</p>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                </div>
+
+                <div class="flavor">
+                    <p>苦味：</p>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                </div>
+
+
+                <label for="weight">重量:</label>
+                <input type="text" id="weight" list="opList" placeholder="請選擇重量">
+                <datalist id="opList">
+                    <option value="115g"></option>
+                    <option value="228g"></option>
+                </datalist>
+
+                <div class="btnFunc">
+                    <label for="qty">數量:</label>
+                    <input type="number" id="qty" required min="1" max="10" placeholder="請選擇數量">
+                    <a href="#">加入購物車</a>
+                </div>
+
+            </div>
+        </div>
+        <div>
+            <div class="introBelow">
+                <img src="./pics/Colombia_Coffee_Roasters_Lifestyle-.jpg" alt="pic1">
+                <div>
+                    <h3>對於烘豆的堅持</h3>
+                    <p>
+                        咖啡豆根據其生長環境和照料方式（例如品種、海拔高度和生產加工）而具有不同的特性，為了最大限度地發揮咖啡豆的魅力，her COFFEE在烘焙過程中時刻做調整，讓咖啡風味達到酸味和甜味之間的平衡
+                    </p>
+                </div>
+
+            </div>
+            <div class="introBelow">
+                <img src="./pics/istockphoto-1837339974-612x612.jpg" alt="pic2">
+                <div>
+                    <h3>對於品質的堅持</h3>
+                    <p>
+                        在her COFFEE，從進口生豆到烘焙、出貨的過程中，我們都進行嚴格的品質管控，希望每一包到達顧客手上的咖啡豆都是最佳狀態。
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 頁尾 -->
+    <footer>
+        <div>
+            <nav>
+                <div>
+                    <a href="./homePage.html">
+                        <img src="./img/logo/logo(logo製作器).jpg" alt="">
+                    </a>
+                </div>
+
+                <table class="news">
+
+                    <tr>
+                        <th>最新消息</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="./newspage01.html">誕生祭
+                                <br>
+                                2024-08-13
+                            </a>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="./newspage02.html">國際咖啡日
+                                <br>
+                                2024-06-24
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="./newspage03.html">節慶快樂
+                                <br>
+                                2023-12-01
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+
+                <table class="social_plf">
+                    <tr>
+                        <th>社群平台</th>
+                    </tr>
+                    <tr>
+                        <td><a href="">Instagram</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="">Facebook</a></td>
+                    </tr>
+                </table>
+            </nav>
+            <p>© 2024  Coffee Company</p>
+        </div>
+    </footer>
+    <script>
+        function myButton(x) {
+            x.classList.toggle("change");
+        }
+
+        function mainImg() {
+            var x = document.getElementById("mainPic");
+            x.src = "./pics/15d3a469006593.5b719df26b9a0.jpg";
+        }
+        function mainImg01() {
+            var x = document.getElementById("mainPic");
+            x.src = "./pics/Types-of-Coffee-Beans_Green_Coffee_Bean_750.jpg";
+        }
+        function mainImg02() {
+            var x = document.getElementById("mainPic");
+            x.src = "./pics/Untitled_design_4_da58d513.jpg";
+        }
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>her COFFEE</title>
+    <link rel="icon" href="./img/icon/cup-hot.svg">
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <style>
+        /* Slider */
+        /* Slideshow container */
+        .slideshow-container {
+            max-width: 80%;
+            position: relative;
+            margin: auto;
+            margin-bottom: 5px;
+        }
+
+        /* Hide the images by default */
+        .mySlides {
+            display: none;
+        }
+
+        .mySlides img {
+            height: 480px;
+            object-fit: cover;
+        }
+
+        /* Next & previous buttons */
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -22px;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* The dots/bullets/indicators */
+        .dot {
+            cursor: pointer;
+            height: 8px;
+            width: 30px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 25px;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active,
+        .dot:hover {
+            background-color: #717171;
+        }
+
+        /* Fading animation */
+        .fade,
+        .pFade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+
+
+        /* 熱賣商品 */
+        /* .productsection h2 {
+            margin: 10px 10px;
+            font-size: 1rem;
+        }
+
+        .productsection {
+            width: 80%;
+            margin: 20px auto;
+        }
+
+        .img_group {
+            display: flex;
+            align-items: center;
+        }
+
+        .img_group div {
+            width: 120px;
+            height: 180px;
+            display: inline-block;
+            position: relative;
+            top: 0px;
+            margin-right: 8px;
+            border-radius: 10px;
+            overflow: hidden;
+            background-color: #fff;
+            box-shadow: 3px 3px 3px #888;
+            text-align: center;
+        }
+
+        .img_group p {
+            font-size: 12px;
+            padding: 5px;
+            line-height: 1rem;
+            text-align: center;
+            font-family: monospace;
+        }
+
+        .img_group img {
+            width: 100%;
+            height: 80px;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+
+        }
+
+        .productBtn {
+            cursor: pointer;
+            padding: 10px;
+            font-size: 2rem;
+            font-weight: bold;
+            transition: 0.4s ease;
+            color: #555;
+
+        }
+
+        .productBtn:hover {
+            text-shadow: -3px -2px 3px #ccc;
+
+        } */
+
+
+        /* 熱賣商品摺頁 */
+        /* div.img_fold {
+            width: 40px;
+            height: 180px;
+            overflow: hidden;
+        }
+
+        .img_fold img {
+            width: 100%;
+            height: 80px;
+
+        }
+
+        .img_fold>a>p {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        } */
+
+        /* 商品輪播 */
+        .mySwiper>p {
+            font-size: 1rem;
+            margin: 10px 0 15px 10px;
+        }
+
+        .swiper {
+            width: 800px;
+            height: auto;
+            /* overflow: visible; */
+            position: relative;
+            margin: 10px 0px 30px 10vw;
+            padding: 15px;
+
+        }
+
+        .swiper-slide {
+            text-align: center;
+            width: 120px;
+            height: 180px;
+            font-size: 18px;
+            background: #fff;
+            display: inline-block;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 3px 3px 3px #888;
+
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 80px;
+            object-fit: cover;
+            display: block;
+            /* animation: fadeIn 2s linear 0s; */
+
+        }
+
+        .swiper-slide p {
+            font-size: 12px;
+            padding: 2px;
+            line-height: 1rem;
+            text-align: center;
+            font-family: monospace;
+
+        }
+
+        .swiper-slide a {
+            text-decoration: none;
+            color: #333;
+            display: block;
+        }
+
+        .swiper-slide a:hover {
+            text-decoration: underline solid #333;
+        }
+
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: #888;
+            width: auto;
+            height: auto;
+            margin-top: 0;
+            margin-right: -30px;
+            margin-left: -30px;
+            transform: translateY(-30%);
+
+        }
+
+        .swiper-button-next:hover,
+        .swiper-button-prev:hover {
+            opacity: .8;
+        }
+
+
+        .swiper-button-next::after,
+        .swiper-button-prev::after {
+            content: '';
+
+        }
+
+
+        /* about us bar */
+        .aboutus_bar {
+            width: 80%;
+            margin: auto;
+            position: relative;
+            text-align: center;
+            margin-bottom: 30px;
+            animation: fadeIn 1s linear 0s;
+
+        }
+
+        .aboutus_bar img {
+            width: 100%;
+            height: 30vh;
+            object-fit: cover;
+            /* animation: fadeIn 2s linear 0s; */
+
+
+        }
+
+        .aboutus_bar h1 {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #eee;
+            font-family: monospace;
+            font-weight: bold;
+            font-size: 1rem;
+
+        }
+
+        .aboutus_bar a {
+            position: absolute;
+            left: 20%;
+            top: 50%;
+            background-color: rgba(255, 255, 255, .3);
+            color: #eee;
+            text-align: left;
+            width: 30%;
+            transform: translate(-50%, -50%);
+            font-family: monospace;
+            text-decoration: none;
+            padding: 10px;
+        }
+
+        .aboutus_bar h3 {
+            font-size: 1rem;
+            font-weight: bold;
+            padding-right: 10px;
+        }
+
+        .aboutus_bar p {
+            width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            padding-top: 10px;
+            font-family: monospace;
+
+        }
+
+        .aboutus_bar>a>div {
+            display: flex;
+
+        }
+
+        /* about coffee bar*/
+        .aboutcoffee {
+            width: 80%;
+            margin: 10px auto;
+            animation: fadeIn 1s linear 0s;
+
+
+        }
+
+        .aboutcoffee>a {
+            display: inline-block;
+            background-color: rgba(220, 220, 220, .5);
+            color: #333;
+            font-family: monospace;
+            height: 30vh;
+            width: 50%;
+            margin-top: -50%;
+            margin-left: 50%;
+            text-decoration: none;
+
+
+
+        }
+
+        .aboutcoffee a div,
+        .aboutcoffee a p {
+            padding: 20px 20px 0 20px;
+
+
+
+
+        }
+
+        .aboutcoffee a h3 {
+            padding-right: 10px;
+            font-weight: bold;
+            font-size: 1rem;
+
+        }
+
+        .aboutcoffee a p {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+        }
+
+        .aboutcoffee img {
+            width: 60%;
+            height: 30vh;
+            object-fit: cover;
+
+        }
+
+        .aboutcoffee>a>div {
+            display: flex;
+            padding-top: 10vh;
+
+        }
+
+
+        /* contact */
+        .contact_info {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            margin: 10px auto;
+            width: 80%;
+            height: 30vh;
+            justify-content: center;
+            margin-top: 50px;
+            font-family: monospace;
+
+
+        }
+
+        .contact_info iframe {
+            height: 100%;
+            margin-right: 5vw;
+        }
+
+        .contact_info iframe,
+        .contact_info div {
+            width: 60%;
+            padding: 10px;
+        }
+
+        .contact_info h2 {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+        }
+
+        .contact_info p {
+            font-size: 1rem;
+        }
+
+        /* rwd */
+        @media screen and (max-width:920px) {
+            .mySlides img {
+                height: 350px;
+            }
+
+            .contact_info p {
+                font-size: .75rem;
+            }
+
+            .contact_info h2 {
+                font-size: 1.25rem;
+                margin-bottom: 20px;
+            }
+
+            .img_group div:nth-of-type(4),
+            .img_group div:nth-of-type(5) {
+                display: none;
+            }
+
+            .swiper {
+                width: 80%;
+                margin: 30px auto;
+
+            }
+
+        }
+
+        @media screen and (max-width:480px) {
+
+            .img_group div:nth-of-type(3),
+            .img_group div:nth-of-type(8) {
+                display: none;
+            }
+        }
+
+        @media screen and (max-width:1050px) {
+            .slideshow-container {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 頁首 -->
+    <a href="#" class="goTop">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+            <path fill="currentColor" d="m4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8z" />
+        </svg>
+    </a>
+    <header>
+
+        <div class="container" onclick="myButton(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+
+            <!-- 隱藏的rwd menu -->
+            <div class="rwdMenu" onclick="">
+                <nav>
+                    <ul>
+
+                        <li>
+                            <a href="./aboutUs.html">關於我們 ABOUT US</a>
+                        </li>
+
+
+                        <li>
+                            <a href="./aboutCoffee00.html">關於咖啡 ABOUT COFFEE ></a>
+                            <ul class="aboutCoffee">
+                                <li><a href="./aboutCoffee01.html">Roasting</a></li>
+                                <li><a href="./aboutCoffee02.html">HandDrip</a></li>
+                            </ul>
+                        </li>
+
+
+                        <li>
+                            <a href="./product.html">線上商店 ONLINE SHOP ></a>
+                            <ul class="onlineShop">
+                                <li><a href="./product.html">瓜地馬拉</a></li>
+                                <li><a href="./product01.html">衣索匹亞</a></li>
+                                <li><a href="./product02.html">尼加拉瓜</a></li>
+                            </ul>
+                        </li>
+
+
+                        <li>
+                            <a href="./newspage00.html">最新消息 NEWS</a>
+                        </li>
+
+                    </ul>
+                </nav>
+            </div>
+
+        </div>
+
+
+
+        <a href="./homePage.html" class="barImg">
+            <img src="./img/logo/headerLogo.png" alt="">
+        </a>
+
+
+        <nav>
+            <ul class="navbar">
+                <li><a href="./aboutUs.html">ABOUT US
+                        <br>關於我們</a></li>
+                <li><a href="./aboutCoffee00.html">ABOUT COFFEE
+                        <br>關於咖啡</a>
+                    <ul class="aboutCoffee">
+                        <li><a href="./aboutCoffee01.html">Roasting</a></li>
+                        <li><a href="./aboutCoffee02.html">HandDrip</a></li>
+                    </ul>
+                </li>
+                <li><a href="./product.html">ONLINE SHOP
+                        <br>線上商店</a>
+                    <ul class="onlineShop">
+                        <li><a href="./product.html">瓜地馬拉</a></li>
+                        <li><a href="./product01.html">衣索匹亞</a></li>
+                        <li><a href="./product02.html">尼加拉瓜</a></li>
+                    </ul>
+                </li>
+                <li><a href="./newspage00.html">NEWS
+                        <br>最新消息</a></li>
+            </ul>
+        </nav>
+        <nav>
+            <ul class="navicon">
+                <li><a href="">
+                        <img src="./img/icon/icon_user(op).png" alt="">
+                    </a></li>
+                <!-- <li><a href="">
+                        <img src="./img/icon/icon_search(op).png" alt="">
+                    </a></li> -->
+                <li><a href="">
+                        <img src="./img/icon/icon_cart(op).png" alt="">
+                    </a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- 輪播圖 -->
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+            <img src="./img/89093bafda6f111157db86baa72d9545.jpg" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+            <img src="./img/coffeeRoaster01.jpg" style="width:100%">
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <!-- The dots/circles -->
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+    </div>
+    <!-- <div class="slider">
+        <img src="./img/istockphoto-637758628-1024x1024.jpg" alt="">
+    </div> -->
+
+    <!-- 熱賣商品 -->
+    <!-- Swiper -->
+    <div class="swiper mySwiper">
+        <p>熱賣商品</p>
+        <div class="swiper-wrapper">
+
+
+            <div class="swiper-slide">
+                <a href="./product22.html">
+                    <img src="./pics/ai-generated-red-cherry.jpg">
+                    <p>
+                        衣索匹亞 西達摩 卡拉莫 日曬 G1</p>
+                    <p>$600</p>
+                </a>
+
+            </div>
+
+
+            <div class="swiper-slide">
+                <a href="./product21.html">
+                    <img src="./pics/cherry-coffee-beansred-1888028326.jpg">
+                    <p>
+                        衣索匹亞 耶加雪菲 阿瑞洽 日曬</p>
+                    <p>$450</p>
+                </a>
+            </div>
+
+
+
+            <div class="swiper-slide">
+                <a href="./product23.html">
+                    <img
+                        src="./pics/agriculture-picking-coffee-berries-farmer-s-hand-picking-arabica-coffee-berries-robusta-berries-by-hands-vietnam-generative-ai_61243-3441.jpg">
+                    <p>衣索匹亞 吉吉莎 水洗</p>
+                    <p>$450</p>
+                </a>
+            </div>
+
+
+
+            <div class="swiper-slide">
+                <a href="./product11.html">
+                    <img src="./pics/coffee-arabica-coffee-plantation-harvest-day-thailand_213396-3120.jpg">
+                    <p>
+                        瓜地馬拉 貝拉伊麗莎白莊園 波旁種 水洗處理</p>
+                    <p>$450</p>
+                </a>
+            </div>
+
+
+
+            <div class="swiper-slide">
+                <a href="./product12.html">
+                    <img src="./pics/istockphoto-1220735006-612x612.jpg">
+                    <p>
+                        瓜地馬拉 瓜達隆莊園 帕奇種 水洗處理</p>
+                    <p>$450</p>
+                </a>
+            </div>
+
+
+
+            <div class="swiper-slide">
+                <a href="./product13.html">
+                    <img src="./pics/istockphoto-1337868547-170667a.jpg">
+                    <p>
+                        瓜地馬拉 瓜達隆莊園 帕奇種 水洗處理</p>
+                    <p>$450</p>
+                </a>
+            </div>
+
+
+
+            <div class="swiper-slide">
+                <a href="./product31.html">
+                    <img src="./pics/Untitled_design_4_da58d513.jpg">
+                    <p>尼加拉瓜 檸檬樹莊園 爪哇長顆種 日曬</p>
+                    <p>$800</p>
+                </a>
+            </div>
+
+
+
+            <div class="swiper-slide">
+                <a href="./product32.html">
+                    <img src="./pics/coffee-arabica-coffee-plantation-harvest-day-thailand_213396-3120.jpg">
+                    <p>
+                        尼加拉瓜 媽媽米娜莊園 紅卡太一種 水洗</p>
+                    <p>$400</p>
+                </a>
+            </div>
+
+
+
+            <div class="swiper-slide">
+                <a href="./product33.html">
+                    <img src="./pics/istockphoto-1220735006-612x612.jpg">
+                    <p>
+                        尼加拉瓜 愉悅莊園 Ethiosar種 日曬</p>
+                    <p>$450</p>
+                </a>
+            </div>
+
+
+        </div>
+
+        <div class="swiper-button-next">
+            <svg xmlns="http://www.w3.org/2000/svg" width="82" height="82" viewBox="0 0 24 24">
+                <path fill="currentColor" d="m10 17l5-5l-5-5z" />
+            </svg>
+        </div>
+
+        <div class="swiper-button-prev">
+            <svg xmlns="http://www.w3.org/2000/svg" width="82" height="82" viewBox="0 0 24 24">
+
+                <path fill="currentColor" d="m14 7l-5 5l5 5z" />
+            </svg>
+        </div>
+    </div>
+
+
+
+
+    <!-- about us -->
+    <div class="aboutus_bar">
+        <img src="./pics/Learn_Beans.jpg" alt="">
+        <h1>品牌精神</h1>
+        <a href="./aboutUs.html">
+            <div>
+                <h3>關於我們</h3>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-arrow-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                </svg>
+            </div>
+
+            <p>
+                關於我們的內容關於我們的內容關於我們的內容關於我們的內容關於我們的內容關於我們的內容
+                關於我們的內容關於我們的內容關於我們的內容關於我們的內容
+            </p>
+        </a>
+    </div>
+    <!-- about coffee -->
+    <div class="aboutcoffee">
+        <img src="./pics/Kỹ-Thuật-Cupping-1-Những-Khái-Niệm-Cơ-Bản-Về-Cupping-–-SCA.jpg" alt="">
+        <a href="./aboutCoffee00.html">
+            <div>
+                <h3>關於咖啡</h3>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-arrow-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                </svg>
+            </div>
+            <p>關於咖啡的內容關於咖啡的內容關於咖啡的內容關於咖啡的內容關於咖啡的內容關於咖啡的內容</p>
+        </a>
+    </div>
+    <!-- location -->
+    <div class="contact_info">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3640.908713380809!2d120.68005280000001!3d24.139843799999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d12fc9b1417%3A0x898f32fb5c88d6b8!2zNDAw5Y-w5Lit5biC5Lit5Y2A5biC5bqc6LevNzPomZ8!5e0!3m2!1szh-TW!2stw!4v1721723674877!5m2!1szh-TW!2stw"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div>
+            <h2>Contact</h2>
+            <p>地址:400台中市中區市府路73號
+                <br>
+                Line:@coffee
+                <br>
+                電話: 04 2223 1035
+            </p>
+        </div>
+    </div>
+
+    <!-- 頁尾 -->
+    <footer>
+        <div>
+            <nav>
+                <div>
+                    <a href="./homePage.html">
+                        <img src="./img/logo/logo(logo製作器).jpg" alt="">
+                    </a>
+                </div>
+
+                <table class="news">
+
+                    <tr>
+                        <th>最新消息</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="./newspage01.html">誕生祭
+                                <br>
+                                2024-08-13
+                            </a>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="./newspage02.html">國際咖啡日
+                                <br>
+                                2024-06-24
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="./newspage03.html">節慶快樂
+                                <br>
+                                2023-12-01
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+
+                <table class="social_plf">
+                    <tr>
+                        <th>社群平台</th>
+                    </tr>
+                    <tr>
+                        <td><a href="">Instagram</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="">Facebook</a></td>
+                    </tr>
+                </table>
+            </nav>
+            <p>© 2024  Coffee Company</p>
+        </div>
+    </footer>
+    <script>
+        // menu nav btn
+        function myButton(x) {
+            x.classList.toggle("change");
+        }
+
+        // header slide
+        let slideIndex = 1;
+        showSlides(slideIndex);
+        // Next/previous controls
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+        // Thumbnail image controls
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+
+        // product slide
+        // let productIndex = 1;
+        // pSlides(productIndex);
+        // // Next/previous controls
+        // function plus(n) {
+        //     pSlides(productIndex += n);
+        // }
+
+        // function pSlides(n) {
+        //     let i;
+        //     let slides = document.getElementsByClassName("pSlide");
+        //     if (n > slides.length) { productIndex = 1 }
+
+        // }
+
+
+    </script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 4,
+            spaceBetween: 16,
+            loop: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+</body>
+
+</html>
